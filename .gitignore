@@ -162,3 +162,5 @@ cython_debug/
 
 dev-books
 .DS_STORE
+book
+_build

@@ -1,0 +1,10 @@
+graph LR
+    x -->|Wxh| first((+))
+    subgraph Simple Recurrent Neuron
+    h -->|Whh| first((+))
+    bh --> first((+))
+    first((+)) -->|tanh| h
+    h -->|Why| second((+))
+    by --> second((+))
+    end
+    second((+)) --> y

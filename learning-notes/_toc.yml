@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: formular
+- file: perceptron
+- file: mlp
+- file: optimizers
+- file: softmax
+- file: convolution
+- file: rnn
