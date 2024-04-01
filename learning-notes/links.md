@@ -1,0 +1,3 @@
+# Links
+* [colah's Blog](https://colah.github.io) - Contains background information on neural networks using examples and good visualizations (CNN, Backpropagation, LSTM, RNN)
+* [CNN Explainer](https://poloclub.github.io/cnn-explainer/) Interactive explanations on CNNs
