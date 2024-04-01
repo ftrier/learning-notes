@@ -3,3 +3,4 @@ matplotlib
 scipy
 jupyter-book
 sphinxcontrib-mermaid
+scikit-learn
