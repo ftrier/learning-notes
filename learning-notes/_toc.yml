@@ -9,5 +9,6 @@ chapters:
 - file: mlp
 - file: optimizers
 - file: softmax
+- file: iris
 - file: convolution
 - file: rnn
