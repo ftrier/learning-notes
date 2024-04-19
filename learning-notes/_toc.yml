@@ -12,4 +12,5 @@ chapters:
 - file: iris
 - file: convolution
 - file: rnn
+- file: rl
 - file: links
