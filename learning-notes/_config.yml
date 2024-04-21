@@ -3,7 +3,8 @@
 
 title: Learning Notes
 author: Felix Trier
-logo: images/icon.jpg
+logo: images/icon_transparent.png
+copyright: "2024"
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -18,6 +19,9 @@ latex:
 # Add a bibtex file so that we can create citations
 # bibtex_bibfiles:
 #   - references.bib
+
+launch_buttons:
+  binderhub_url: "https://mybinder.org"
 
 # Information about where the book exists on the web
 repository:

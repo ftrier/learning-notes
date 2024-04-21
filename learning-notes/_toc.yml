@@ -3,14 +3,23 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: formular
-- file: perceptron
-- file: mlp
-- file: optimizers
-- file: softmax
-- file: iris
-- file: convolution
-- file: rnn
-- file: rl
-- file: links
+parts:
+- caption: Basics
+  chapters:
+  - file: formular
+  - file: perceptron
+  - file: mlp
+  - file: iris
+
+- caption: Background
+  chapters:
+  - file: optimizers
+  - file: softmax
+  - file: convolution
+- caption: Advanced
+  chapters:
+  - file: rnn
+  - file: rl
+- caption: Reference
+  chapters:
+  - file: links

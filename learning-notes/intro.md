@@ -1,4 +1,4 @@
-# Learning notes for pattern recognition
+# Pattern Recognition Notes
 
 Welcome to my pattern recognition learning notes! In this document, I will be sharing my insights, observations, and understanding of pattern recognition techniques and algorithms. Pattern recognition is a fascinating field that involves the identification and interpretation of patterns in data, enabling us to make predictions, classifications, and decisions based on those patterns.
 
