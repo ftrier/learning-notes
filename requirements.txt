@@ -6,3 +6,4 @@ sphinxcontrib-mermaid
 scikit-learn
 imageio
 gymnasium
+pandas
