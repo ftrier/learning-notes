@@ -7,13 +7,13 @@ parts:
 - caption: Basics
   chapters:
   - file: formular
-  - file: perceptron
   - file: mlp
   - file: iris
   - file: cnn
 
 - caption: Background
   chapters:
+  - file: perceptron
   - file: optimizers
   - file: softmax
   - file: convolution
