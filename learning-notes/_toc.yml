@@ -24,3 +24,4 @@ parts:
 - caption: Reference
   chapters:
   - file: links
+  - file: assessment
