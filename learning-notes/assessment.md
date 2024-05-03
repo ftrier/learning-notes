@@ -2,7 +2,7 @@
 
 Below is a curated list of all the concepts/terms we have seen so far.
 You should be able to at least identify most of them.
-They are the basics for the current state-of-the art artificial intelligence models.
+They are the basics for the current state-of-the-art artificial intelligence models.
 
 | Topic                  | Terms            |             |          |                  |      |     |     |     |     |     |
 | ---------------------- | ---------------- | ----------- | -------- | ---------------- | ---- | --- | --- | --- | --- | --- |
