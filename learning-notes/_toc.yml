@@ -10,7 +10,7 @@ parts:
   - file: mlp
   - file: iris
   - file: cnn
-
+  - file: k-means
 - caption: Background
   chapters:
   - file: perceptron
