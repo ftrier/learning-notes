@@ -25,3 +25,6 @@ parts:
   chapters:
   - file: links
   - file: assessment
+- caption: Computer Science
+  chapters:
+  - file: p-np
