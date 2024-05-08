@@ -4,36 +4,30 @@
 title: Learning Notes
 author: Felix Trier
 logo: images/icon_transparent.png
-copyright: "2024"
+copyright: 2024
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
 
-# Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
     targetname: learning-notes.tex
 
-# Add a bibtex file so that we can create citations
-# bibtex_bibfiles:
-#   - references.bib
-
 launch_buttons:
   binderhub_url: "https://mybinder.org"
 
-# Information about where the book exists on the web
 repository:
   url: https://github.com/ftrier/learning-notes  # Online location of your book
   path_to_book: learning-notes  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
   use_repository_button: true
+  extra_footer: |
+    <a href='https://ftrier-github-io.translate.goog/learning-notes/intro.html?_x_tr_sl=en&_x_tr_tl=de&_x_tr_hl=de&_x_tr_pto=wapp'>German🇩🇪 Version</a>
 
 sphinx:
   extra_extensions:
