@@ -4,7 +4,7 @@
 title: Learning Notes
 author: Felix Trier
 logo: images/icon_transparent.png
-copyright: 2024
+copyright: '2024'
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
