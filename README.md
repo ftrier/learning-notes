@@ -1,7 +1,7 @@
 # Learning Notes
-<div align="center">
-<a href="https://ftrier.github.io/learning-notes/intro.html"><img src="https://jupyterbook.org/badge.svg" alt="Jupyter Book Badge" /></a>
-</div>
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ftrier/learning-notes)
+[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://ftrier.github.io/learning-notes/intro.html)
+
 
 Welcome to the Learning Notes repository! This repository contains my personal notes for students and reminders for myself. It serves as a valuable resource for learning and reference.
 
