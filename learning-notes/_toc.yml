@@ -11,6 +11,7 @@ parts:
   - file: iris
   - file: cnn
   - file: k-means
+  - file: pca
   - file: torch
 - caption: Background
   chapters:
