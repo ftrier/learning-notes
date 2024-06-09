@@ -21,10 +21,13 @@ parts:
   - file: convolution
 - caption: Advanced
   chapters:
+  - file: obj-detection
   - file: rnn
   - file: rl
+  - file: dqn
 - caption: Reference
   chapters:
+  - file: abbreviations
   - file: links
   - file: assessment
 - caption: Computer Science
