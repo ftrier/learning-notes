@@ -23,8 +23,10 @@ parts:
   chapters:
   - file: rnn
   - file: rl
+  - file: dqn
 - caption: Reference
   chapters:
+  - file: abbreviations
   - file: links
   - file: assessment
 - caption: Computer Science
