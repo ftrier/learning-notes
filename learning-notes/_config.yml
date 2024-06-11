@@ -26,8 +26,6 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
-  extra_footer: |
-    <a href='https://ftrier-github-io.translate.goog/learning-notes/intro.html?_x_tr_sl=en&_x_tr_tl=de&_x_tr_hl=de&_x_tr_pto=wapp'>German🇩🇪 Version</a>
 
 sphinx:
   extra_extensions:
