@@ -24,6 +24,7 @@ parts:
   - file: rnn
   - file: rl
   - file: dqn
+  - file: obj-detection
 - caption: Reference
   chapters:
   - file: abbreviations

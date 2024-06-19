@@ -8,3 +8,4 @@ imageio
 gymnasium
 pandas
 torch
+jax
