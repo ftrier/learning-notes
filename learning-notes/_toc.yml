@@ -12,6 +12,7 @@ parts:
   - file: cnn
   - file: k-means
   - file: pca
+  - file: kalman-filters
   - file: torch
 - caption: Background
   chapters:
