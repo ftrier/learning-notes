@@ -34,3 +34,6 @@ parts:
 - caption: Computer Science
   chapters:
   - file: p-np
+- caption: Cheat Sheets
+  chapters:
+  - file: kubernetes
