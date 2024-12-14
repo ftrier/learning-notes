@@ -3,17 +3,15 @@
 ## Key Concepts
 
 * **Pod** = Container + Layer to abstract the underlying container technology. Each pod has its own ip address
-* **Service** is a static IP address to a pod and acts as load balancer for replicated pods
+* **Service** provides a static IP address to a pod and acts as load balancer for replicated pods
 * All pod have a service. Lifetime of pod and service is not related
 * **Ingress** is an "external service" which routes requests to services
-* **ConfigMap** is an external configuration of the application, e.g. DB_URL
+* **ConfigMap** stores external configuration of the application, e.g. DB_URL
 * **Secret** like ConfigMap, base64 encoded
 * **Volume** attaches a physical storage to a pod
-* **Deployment** is a blueprint for a pod. You can specify the number of replicas of a pod. Consider the template section as the blueprint for the pods
-* Deployment, Spec for the deployment
-  * Replicaset
-    * Pod, Spec for the pod
-* **StatefulSet** is a the deployment equivalent for stateful apps (databases). Ensures that database reads/writes are synchronized to avoid data inconsistencies
+* **Deployment** contains a blueprint (template section) for a pod. You can specify the number of replicas of a pod.
+* Deployment Spec &rarr; Replicaset &rarr; Pod Spec
+* **StatefulSet** is the deployment equivalent for stateful applications (e.g., databases). It ensures that database reads and writes are synchronized to avoid data inconsistencies
 * **Worker** node consists of 3 processes
   * Container runtime
   * Kubelet handles the pods
@@ -98,47 +96,48 @@ Each config has three parts:
 
   1. Metadata
   2. Specification
-  3. An automatically generated status comparing desired and actual state (self healing feature provided by etcd)
+  3. An automatically generated status that compares the desired and actual state (self-healing feature provided by etcd)
 
-Service's selector (`app: nginx`) and the deployment's label `app:nginx` define which pods are registered to the service.
+The service's selector (`app: nginx`) and the deployment's label (`app: nginx`) define which pods are registered to the service.
 
 ## Ingress & External Services
 
-* Service's `targetPort` has to be equal to the pod's `containerPort`
-* LoadBalacner is an external service and opens up `nodePort`
-* LoadBalancer is only used **without** Ingress, because Ingress has rules to map an external url to an internal service
-* Ingress Controller must be installed in the cluster separately
-* This requires a **proxy server** with a public ip address to redirect requests to the ingress controller
+* The service's `targetPort` must match the pod's `containerPort`.
+* A LoadBalancer is an external service that opens up `nodePort`.
+* A LoadBalancer is only used **without** Ingress, as Ingress has rules to map an external URL to an internal service.
+* An Ingress Controller must be installed in the cluster separately.
+* This requires a **proxy server** with a public IP address to redirect requests to the Ingress Controller.
+
 * For minikube:
 
 ```sh
 minikube addons enable ingress
 minikube service mongo-express-service
 ```
-
+*
 ## Namespaces
 
-* Namespaces are virtual cluster inside a cluster
-* Standard Namespaces
-  * `kube-system`: processes kubectl
-  * `kube-public`: contains public information, `kubectl cluster info`
-  * `kube-node-lease`: heartbeats of nodes
+* Namespaces are virtual clusters within a cluster.
+* Standard Namespaces:
+  * `kube-system`: processes kubectl commands
+  * `kube-public`: contains public information, `kubectl cluster-info`
+  * `kube-node-lease`: tracks node heartbeats
   * `default`
 
 ### Grouping
 
 * Logical grouping: Database Namespace, Monitoring Namespace, Nginx Ingress
 * Staging and Development Grouping
-* Blue/Green Deployment, if they use the same resources
-  * Production Blue (is active)
-  * Production Green (will be active)
+* Blue/Green Deployment, if they use the same resources:
+  * Production Blue (active)
+  * Production Green (standby)
 * One Namespace per team
 
 ### Limitations
 
-* Cannot use configmaps/secrets between namespaces
-* Volume/node cannot be namespaces
-* `kubens`/`kubectx` allows to select the default namespace in the shell
+* ConfigMaps and Secrets cannot be shared between namespaces.
+* Volumes and nodes cannot be namespaced.
+* `kubens`/`kubectx` allows selecting the default namespace in the shell.
 
 ## Helm Chart
 
@@ -149,31 +148,30 @@ minikube service mongo-express-service
 * `charts/` folder contains chart dependencies
 * `templates/` contains the actual charts
 
-
 ## Storage
 
 ### Requirements
 
-1. Storage does not depend on pod lifecycle
-2. Storage must be available on all nodes
-3. Storage need to survive if cluster crashes
+1. Storage should not depend on the pod lifecycle.
+2. Storage must be accessible from all nodes.
+3. Storage must persist even if the cluster crashes.
 
 ### Persistent Volumes
 
-* **Persistent Volumes** are a cluster resource like memory, they must exist before pods exist
-* Local storage violates requirement 2 and 3, for **database persistency, it is best to create a remote storage**
-* Applications do not directly use PV, but have to claim to use volumes: **Persistent Volume Claims**
-* PV are not namespaced
-* PVC are namespaced
-* **Storage Classes** create persistent volumes in the background via a **provisioner**
-* Storage Classes are called from the PVC
+* **Persistent Volumes (PV)** are a cluster resource similar to memory; they must exist before pods are created.
+* Local storage violates requirements 2 and 3. For **database persistence**, it is best to use remote storage.
+* Applications do not directly use PVs but must claim them using **Persistent Volume Claims (PVCs)**.
+* PVs are not namespaced.
+* PVCs are namespaced.
+* **Storage Classes** create persistent volumes in the background using a **provisioner**.
+* Storage Classes are referenced by PVCs.
 
-## Statefulset
+## StatefulSet
 
-* Replicas maintain a sticky identity for each pod
-  * Pods are name (Statefulsetname)-(ordinal), master = 0
-  * Pods have fixed DNS Name
-* Pods are created from the same spec but are not interchangeable
-* Only the master pod is allowed to write to a DB, the other workers are only allowed to read
-* Pods need to sync the data all the time
-* Due to the sticky identity remote storage should be used
+* Replicas maintain a unique identity for each pod.
+  * Pods are named (StatefulSetName)-(ordinal), with the master being 0.
+  * Pods have fixed DNS names.
+* Pods are created from the same specification but are not interchangeable.
+* Only the master pod is allowed to write to the database; other pods can only read.
+* Pods need to synchronize data continuously.
+* Due to the unique identity, remote storage should be used.
