@@ -4,7 +4,6 @@ jax
 jupyter-book
 matplotlib
 numpy
-pandas
 scikit-learn
 scipy
 torch --index-url https://download.pytorch.org/whl/cpu
