@@ -1,11 +1,10 @@
-numpy
-matplotlib
-scipy
-jupyter-book
-sphinxcontrib-mermaid
-scikit-learn
-imageio
 gymnasium
-pandas
-torch
+imageio
 jax
+jupyter-book
+matplotlib
+numpy
+pandas
+scikit-learn
+scipy
+torch --index-url https://download.pytorch.org/whl/cpu
