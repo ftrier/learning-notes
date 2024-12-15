@@ -37,3 +37,4 @@ parts:
 - caption: Cheat Sheets
   chapters:
   - file: kubernetes
+  - file: virtualization

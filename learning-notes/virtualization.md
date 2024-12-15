@@ -1,0 +1,19 @@
+# Virtualization Cheat Sheet
+
+| Term              | Description                                                                                                                                                                                                    |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| QEMU              | A generic and open source machine emulator and virtualizer. It can emulate a complete computer system, including a processor and various peripherals, and can run a guest OS on the same hardware as the host. |
+| KVM               | A Linux kernel module that allows a user space program to utilize the hardware virtualization features of various processors. It is a type 1 hypervisor built into the Linux kernel.                           |
+| libvirt           | A toolkit to manage virtualization platforms. It provides a common API for managing various virtualization platforms, such as QEMU and KVM.                                                                    |
+| Type 1 hypervisor | A bare-metal hypervisor that runs directly on the host's hardware to control the hardware and manage guest operating systems.                                                                                  |
+| Type 2 hypervisor | A hosted hypervisor that runs on a conventional operating system just like other computer programs, such as VirtualBox and VMware Workstation.                                                                 |
+| LXC               | Linux Containers (LXC) is an operating-system-level virtualization method for running multiple isolated Linux systems (containers) on a single Linux control host.                                             |
+| OpenVZ            | An operating-system-level virtualization technology for Linux. It allows a physical server to run multiple isolated operating system instances, called containers or VEs (Virtual Environments).               |
+| VMware ESXi       | A type 1 hypervisor developed by VMware for deploying and serving virtual computers.                                                                                                                           |
+| Xen               | An open-source type 1 hypervisor that enables the creation, management, and execution of virtual machines.                                                                                                     |
+| Hyper-V           | A type 1 hypervisor developed by Microsoft for running virtual machines on Windows systems.                                                                                                                    |
+| Vagrant           | A tool for building and managing virtual machine environments in a single workflow.                                                                                                                            |
+| Proxmox VE        | An open-source server virtualization management solution based on QEMU/KVM and LXC.                                                                                                                            |
+| VirtualBox        | A type 2 hypervisor developed by Oracle for running virtual machines on various operating systems.                                                                                                             |
+| SR-IOV            | A specification that allows the isolation of PCI Express resources for manageability and performance.                                                                                                          |
+| vSphere           | A suite of server virtualization products from VMware, including ESXi and vCenter Server.                                                                                                                      |
