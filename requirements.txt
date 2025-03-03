@@ -4,5 +4,6 @@ jax
 jupyter-book
 matplotlib
 numpy
+pandas
 scikit-learn
 scipy
