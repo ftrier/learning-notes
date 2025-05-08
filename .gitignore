@@ -165,3 +165,6 @@ dev-books
 book
 _build
 todo
+hello-world.txt
+.vscode
+.ansible
