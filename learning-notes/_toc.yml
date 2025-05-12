@@ -37,6 +37,7 @@ parts:
 - caption: Devops
   chapters:
   - file: linux
+  - file: bash
   # - file: git
   # - file: docker
   # - file: kubernetes
@@ -44,6 +45,5 @@ parts:
   # - file: ansible
 - caption: Cheat Sheets
   chapters:
-  - file: bash
   - file: kubernetes
   - file: virtualization

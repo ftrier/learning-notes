@@ -1,4 +1,4 @@
-# Common shell commands
+# Shell Cheat Sheet
 
 ## File and Directory Management
 * ls - List directory contents.
