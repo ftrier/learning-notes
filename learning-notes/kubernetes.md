@@ -31,6 +31,7 @@ kubectl logs >pod<
 kubectl exec -it >pod< — /bin/bash
 kubectl apply/delete -f >file<
 kubectl get pod -o wide
+kubectl get deployments --all-namespaces
 kubectl create namespace my-namespace
 ```
 
