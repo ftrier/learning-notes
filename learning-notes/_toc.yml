@@ -47,3 +47,4 @@ parts:
   - file: kubernetes
   - file: virtualization
   - file: bash
+  - file: git
