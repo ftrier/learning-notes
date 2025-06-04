@@ -75,10 +75,9 @@ git stash apply        # Apply stashed changes
 * Clean up merged branches to keep the repository tidy.
 * Backup your repository by pushing to remote regularly.
 
-## Visualizing Merge vs Rebase
+## Merge vs Rebase
 
 ### Merge
-
 ```
 A---B---C feature
 
