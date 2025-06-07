@@ -168,3 +168,5 @@ todo
 hello-world.txt
 .vscode
 .ansible
+mytext*.txt
+output.txt

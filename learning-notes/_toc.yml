@@ -28,20 +28,19 @@ parts:
   - file: obj-detection
 - caption: Reference
   chapters:
-  - file: abbreviations
   - file: links
   - file: assessment
 - caption: Computer Science
   chapters:
   - file: p-np
-- caption: Devops
-  chapters:
-  - file: linux
-  # - file: git
-  # - file: docker
-  # - file: kubernetes
-  # - file: terraform
-  # - file: ansible
+# - caption: Devops
+#   chapters:
+#   - file: linux
+#   - file: git
+#   - file: docker
+#   - file: kubernetes
+#   - file: terraform
+#   - file: ansible
 - caption: Cheat Sheets
   chapters:
   - file: kubernetes

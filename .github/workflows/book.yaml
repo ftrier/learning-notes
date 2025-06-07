@@ -1,0 +1,44 @@
+name: book
+
+on:
+  push:
+    tags:
+    - "v*.*.*"
+
+jobs:
+  book:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Install latex dependencies
+      run: |
+        sudo apt-get -qq update
+        sudo apt-get install -y     \
+          texlive-latex-recommended \
+          texlive-latex-extra       \
+          texlive-fonts-extra       \
+          fonts-freefont-otf        \
+          texlive-xetex             \
+          latexmk                   \
+          xindy                     \
+          imagemagick
+
+    - name: Build the book
+      run: jupyter-book build learning-notes --builder pdflatex
+
+    - name: Upload artifact
+      uses: softprops/action-gh-release@v2
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: learning-notes/_build/latex/learning-notes.pdf
