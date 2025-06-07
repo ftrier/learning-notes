@@ -13,12 +13,12 @@ git clone <url>         # Clone a repository
 git status              # Show status of changes
 git add <file>          # Stage file(s)
 git commit -m "msg"     # Commit staged changes
-git log                 # Show commit history
+git log --oneline       # Show concise commit history
 ```
 
 ## Branching
 ```sh
-git branch              # List branches
+git branch -a           # List all branches (local + remote)
 git branch <name>       # Create new branch
 git checkout <name>     # Switch branch
 git checkout -b <name>  # Create and switch branch
