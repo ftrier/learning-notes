@@ -86,9 +86,9 @@ D---E---F main
 After merging `feature` into `main`:
 
 ```
-A---B---C feature
-            \
-D---E---F-----G main (merge commit)
+A----B----C feature
+           \
+D---E---F---G main (merge commit)
 ```
 
 ### Rebase
