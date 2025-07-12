@@ -33,6 +33,7 @@ kubectl apply/delete -f >file<
 kubectl get pod -o wide
 kubectl get deployments --all-namespaces
 kubectl create namespace my-namespace
+kubectl rollout restart deployment -n >namespace<
 ```
 
 ## Deployment
